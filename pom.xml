@@ -9,8 +9,19 @@
 
     <name>EJBUtils</name>
 
+
+    <description>
+        Well there is Go to Spring bean action in the NetBeans IDE, so why no Go to EJB? 
+        To fix this unfair state use plugin which cat do the same with EE session beans.
+        Session beans are shown with different color for 2.x and 3.x beans in dialog.
+        Description and mapped name works only fo annotated beans, 
+        not supporting ejb-jar.xml metadata yet.
+    </description>
     <properties>
+        <netbeans.hint.displayName>Go to Enterprise JavaBean Plugin</netbeans.hint.displayName>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.license>MIT License</netbeans.hint.license>
+        <netbeans.version>RELEASE74</netbeans.version>
     </properties>
 
     <repositories>
@@ -136,15 +147,16 @@
                 <artifactId>nbm-maven-plugin</artifactId>
                 <version>3.11</version>
                 <extensions>true</extensions>
-<!--                <configuration>
-                    <project>
-                               <dependency>
-            <id>org.netbeans.api:org-netbeans-modules-java-source</id>
-            <type>impl</type>
-            <explicitValue>0.60.2.10.8.4</explicitValue>
-        </dependency>
-                    </project>
-                </configuration>-->
+                <configuration>
+                    <author>Daniel Kec</author> 
+                    <keystore>./danielkec.jks</keystore>
+                    <keystorealias>danielkec</keystorealias>
+                    <keystorepassword>${keystore.heslo}</keystorepassword>
+                    <requiresRestart>false</requiresRestart>
+                    <homePageUrl>https://github.com/danielkec/SqlXmlPlugin</homePageUrl>
+                    <licenseName>MIT</licenseName>
+                    <licenseFile>./LICENSE</licenseFile>
+                </configuration>
             </plugin>
 
             <plugin>
