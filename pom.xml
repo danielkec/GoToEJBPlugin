@@ -4,7 +4,7 @@
 
     <groupId>cz.kec.nb</groupId>
     <artifactId>EJBUtils</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>nbm</packaging>
 
     <name>EJBUtils</name>
